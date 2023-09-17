@@ -23,5 +23,15 @@ class User {
         console.log("Token deleted");
     }
 }
+// Inherits all methods and variables from User EXCEPT the privates UNLESS we change the access modifier to protected
+class SubUser extends User {
+    constructor() {
+        super(...arguments);
+        this.isFamily = true;
+    }
+    changeCourseCount() {
+        this._courseCount = 4;
+    }
+}
 const terrence = new User("terrence@gmail.com", "terrence");
 // terrence.name = "jung"; this doesn't work
