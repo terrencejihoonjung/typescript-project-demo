@@ -1,5 +1,5 @@
 class User {
-  private _courseCount: number = 1;
+  protected _courseCount: number = 1;
 
   readonly city: string = "Jaipur";
   constructor(public email: string, public name: string) {}
@@ -22,6 +22,15 @@ class User {
 
   private deleteToken(): void {
     console.log("Token deleted");
+  }
+}
+
+// Inherits all methods and variables from User EXCEPT the privates UNLESS we change the access modifier to protected
+class SubUser extends User {
+  isFamily: boolean = true;
+
+  changeCourseCount() {
+    this._courseCount = 4;
   }
 }
 
