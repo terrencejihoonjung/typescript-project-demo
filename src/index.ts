@@ -1,12 +1,7 @@
 class User {
-  email: string;
-  name: string;
-  city: string = "";
-
-  constructor(email: string, name: string) {
-    this.email = email;
-    this.name = name;
-  }
+  readonly city: string = "Jaipur";
+  constructor(public email: string, public name: string) {}
 }
 
 const terrence = new User("terrence@gmail.com", "terrence");
+// terrence.name = "jung"; this doesn't work
