@@ -32,3 +32,15 @@ interface Bottle {
 }
 
 // identityFour<Bottle>({});
+
+function getSearchProducts<T>(products: T[]): T {
+  // Do some database operation
+  const myIndex = 3;
+  return products[myIndex];
+}
+
+const getMoreSearchProducts = <T>(products: T[]): T => {
+  // Do some database operation
+  const myIndex = 4;
+  return products[myIndex];
+};
